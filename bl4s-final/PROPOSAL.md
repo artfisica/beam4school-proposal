@@ -89,13 +89,15 @@ Our Geant4 simulations confirm that even PS vs PMMA needs fewer than 2,000 event
 
 This is **facility-agnostic** — works with DWCs at CERN T9, beam telescopes at DESY, or tracking detectors at ELSA. No magnetic spectrometer required for the core measurement.
 
-### Targets
+### Targets and Facility Considerations
 
-**Plastics (primary):** PE, PP, PS, PMMA, PET, Nylon, PVC — commercial flat sheets, 5/10/20 mm.
+BL4S rules: CERN and DESY accept only **non-combustible** targets; ELSA also permits combustible materials.
 
-**Heritage/geology (extension):** Obsidian, quartz, calcite, alumina, iron oxide — certified mineral standards.
+**At ELSA (preferred for full programme):** Plastics (PE, PP, PS, PMMA, PET, Nylon, PVC) + geological references (obsidian, quartz, calcite, alumina, iron oxide). This gives us the PVC "hero result" and the recycling application.
 
-All targets are solid samples in an aluminium holder. Safety data sheets provided. If any polymer is not permitted at the assigned facility, we substitute graphite and proceed with the geological set.
+**At CERN or DESY:** Non-combustible set only — geological references + graphite + metal foils (Al, Fe) as low-Z anchors. Still spans a wide X₀ range and demonstrates the full classifier concept.
+
+All targets are solid samples in an aluminium holder. Safety data sheets provided.
 
 ### Measurement Program
 
@@ -116,11 +118,7 @@ All targets are solid samples in an aluminium holder. Safety data sheets provide
 *Each material is a point in (θ₀ at 3 GeV/c, θ₀ at 6 GeV/c) space. Plastics cluster bottom-left, minerals top-right, PVC bridges the gap. Both axes are MCS-only — no magnet needed.*
 </div>
 
-This single figure tells the entire story. It is simultaneously:
-- A **scientific result** (chemistry divides matter into two worlds)
-- A **practical lookup table** (identify any sample by its coordinates)
-- A **memorable visualization** (judges remember images)
-- **Proof the technique works** (natural sorting without training data)
+This single figure shows all materials on one plot. But note an important subtlety: because θ₀ ∝ 1/p exactly (the log correction has no momentum dependence), **all materials fall on the same line** with slope = p₁/p₂. The two-momentum plot is a **consistency check and systematics control**, not an independent second discriminator. Classification power comes from the extracted X₀ values. Where the facility offers additional observables (dE/dx, calorimeter response), we add a genuinely independent second axis.
 
 ---
 
