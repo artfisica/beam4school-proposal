@@ -15,9 +15,9 @@
 
 ## Motivation
 
-We are a team of high-school students from Córdoba, Argentina. In our country, plastic waste clogs rivers from the Pampas to Patagonia, and pre-Columbian obsidian tools still emerge from Andean soil. These challenges — sorting plastic for recycling and identifying archaeological materials — share a surprising connection: both can be addressed by measuring how a particle beam scatters inside matter.
+We are students and teachers from the Instituto San Francisco de Asís in Santa Rosa de Calamuchita, Córdoba, Argentina. On the banks of the Río Santa Rosa, two materials defy identification without destroying them: Comechingón morteros carved in rock two thousand years ago, and mixed plastic waste arriving at local recycling cooperatives. The first is untouchable archaeological heritage. The second determines whether recycling is viable. Both pose the same challenge: compositional characterisation without destroying the sample.
 
-We want to show that the same physics probing the structure of the universe can serve society. Participating in BL4S would let us test this idea with a real accelerator beam and bring the results home to our communities.
+We want to demonstrate that particle physics can solve both problems with the same non-destructive technique. Participating in BL4S would let us validate this method with a real beam and bring the results home to our communities.
 
 ---
 
@@ -49,8 +49,7 @@ All predictions are for **10 mm targets at 3 GeV/c**:
 | PET | 28.7 | 0.738 | Plastic | Beverage bottles |
 | **PVC** | **15.3** | **1.039** | **Plastic** | ⚠️ **Problem plastic — contaminates recycling** |
 | | | *— gap —* | | *Organic ↔ inorganic divide* |
-| Obsidian | 12.3 | 1.169 | Heritage | Pre-Columbian tools |
-| SiO₂ | 12.3 | 1.170 | Heritage | Pottery, geological ref. |
+| SiO₂ | 12.3 | 1.170 | Heritage | Quartz — Comechingón morteros |
 | CaCO₃ | 10.7 | 1.261 | Heritage | Marble, mortar, limestone |
 | Al₂O₃ | 10.2 | 1.294 | Heritage | Ceramics, gemstones |
 | Fe₂O₃ | 5.5 | 1.808 | Heritage | Red ochre pigment |
@@ -93,7 +92,7 @@ This is **facility-agnostic** — works with DWCs at CERN T9, beam telescopes at
 
 BL4S rules: CERN and DESY accept only **non-combustible** targets; ELSA also permits combustible materials.
 
-**At ELSA (preferred for full programme):** Plastics (PE, PP, PS, PMMA, PET, Nylon, PVC) + geological references (obsidian, quartz, calcite, alumina, iron oxide). This gives us the PVC "hero result" and the recycling application.
+**At ELSA (preferred for full programme):** Plastics (PE, PP, PS, PMMA, PET, Nylon, PVC) + geological references (quartz, calcite, alumina, iron oxide). This gives us the PVC "hero result" and the recycling application.
 
 **At CERN or DESY:** Non-combustible set only — geological references + graphite + metal foils (Al, Fe) as low-Z anchors. Still spans a wide X₀ range and demonstrates the full classifier concept.
 

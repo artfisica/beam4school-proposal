@@ -78,14 +78,13 @@ PVC      ███████████████████████�
 
             ~~~ GAP: 1.04 → 1.17 mrad ~~~
 
-Obsidian ██████████████████████████░░░░░  1.169  ← silicon/oxygen mineral
-SiO₂     ██████████████████████████░░░░░  1.170
+SiO₂     ██████████████████████████░░░░░  1.170  ← silicon/oxygen mineral
 CaCO₃    ███████████████████████████░░░░  1.261
 Al₂O₃    ████████████████████████████░░░  1.294
 Fe₂O₃    █████████████████████████████████ 1.808  ← iron dominates
 ```
 
-The gap between PVC (1.04 mrad) and obsidian (1.17 mrad) is real and physically meaningful. It reflects a fundamental divide in chemistry:
+The gap between PVC (1.04 mrad) and SiO₂ (1.17 mrad) is real and physically meaningful. It reflects a fundamental divide in chemistry:
 
 **Organic matter** is built from **light elements** — carbon (Z=6), hydrogen (Z=1), oxygen (Z=8), nitrogen (Z=7). Even with chlorine (Z=17) in PVC, the *effective Z* of organic materials tops out around 8–10.
 
@@ -117,8 +116,8 @@ Every material in the proposal earns its place because it solves a real problem:
 | PE, PP | Most common packaging plastics (baseline) |
 | PS, PMMA, PET | Key recyclable plastics with oxygen/nitrogen content |
 | PVC | The "problem plastic" — detecting it is the industrial application |
-| Obsidian | Argentine archaeological significance (Andean trade routes) |
-| SiO₂, CaCO₃ | Pottery/mortar components (heritage science) |
+| SiO₂ | Quartz from the Sierras de Córdoba — Comechingón tools and morteros |
+| CaCO₃ | Pottery/mortar components (heritage science) |
 | Al₂O₃ | Ceramic/pigment reference |
 | Fe₂O₃ | Iron oxide pigment (cave paintings, pottery glazes) |
 
@@ -204,4 +203,4 @@ There is no scenario where you run this experiment and come back with nothing.
 | **Facility-agnostic** | Works at CERN, DESY, or ELSA with standard tracking + scintillators. |
 | **Guaranteed result** | Signal-to-resolution is 20:1 minimum. Statistics need seconds, not hours. |
 | **Failure is interesting** | Every deviation from prediction teaches something. |
-| **Honest about limits** | PE≈PP and obsidian≈SiO₂ show maturity, not weakness. |
+| **Honest about limits** | PE≈PP overlap shows maturity, not weakness. |

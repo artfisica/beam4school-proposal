@@ -75,23 +75,6 @@ materials:
     relevance: "PROBLEM PLASTIC — chlorine contaminates recycling streams"
 
   # ─── HERITAGE / GEOLOGICAL ───
-  - id: Obsidian
-    label: Obsidian (volcanic glass)
-    category: heritage
-    density_g_cm3: 2.35
-    X0_cm: 12.3
-    composition:
-      - element: Si
-        fraction: 0.33
-      - element: O
-        fraction: 0.54
-      - element: Al
-        fraction: 0.08
-      - element: Fe
-        fraction: 0.05
-    thickness_mm: [10]
-    relevance: "Pre-Columbian tools — Argentine archaeological trade routes"
-
   - id: SiO2
     label: Fused quartz
     category: heritage

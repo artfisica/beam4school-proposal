@@ -51,13 +51,12 @@ void DetectorConstruction::DefineMaterials()
     nist->FindOrBuildMaterial("G4_NYLON-6-6");
 
     // Heritage/geological materials
-    nist->FindOrBuildMaterial("G4_SILICON_DIOXIDE");      // Quartz / base of obsidian
+    nist->FindOrBuildMaterial("G4_SILICON_DIOXIDE");      // Quartz (Sierras de Córdoba)
     nist->FindOrBuildMaterial("G4_CALCIUM_CARBONATE");    // Calcite / limestone / clay proxy
     nist->FindOrBuildMaterial("G4_ALUMINUM_OXIDE");       // Alumina / ceramic proxy
     nist->FindOrBuildMaterial("G4_FERRIC_OXIDE");         // Fe2O3 / iron pigment
 
-    // Custom: Obsidian (approximate composition)
-    // ~75% SiO2, ~13% Al2O3, ~5% Na2O, ~4% K2O, ~2% Fe2O3, ~1% CaO
+    // Elements for custom materials
     auto Si = nist->FindOrBuildElement("Si");
     auto O  = nist->FindOrBuildElement("O");
     auto Al = nist->FindOrBuildElement("Al");
@@ -65,16 +64,6 @@ void DetectorConstruction::DefineMaterials()
     auto K  = nist->FindOrBuildElement("K");
     auto Fe = nist->FindOrBuildElement("Fe");
     auto Ca = nist->FindOrBuildElement("Ca");
-
-    auto obsidian = new G4Material("Obsidian", 2.40*g/cm3, 7);
-    obsidian->AddElement(Si, 0.3505); // from SiO2
-    obsidian->AddElement(O,  0.4830);
-    obsidian->AddElement(Al, 0.0688); // from Al2O3
-    obsidian->AddElement(Na, 0.0371); // from Na2O
-    obsidian->AddElement(K,  0.0332); // from K2O
-    obsidian->AddElement(Fe, 0.0140); // from Fe2O3
-    obsidian->AddElement(Ca, 0.0071); // from CaO
-    // (Fractions sum to ~0.994, close enough for simulation)
 
     // Custom: Granite (approximate)
     // ~72% SiO2, ~14% Al2O3, ~4% K2O, ~3% Na2O, ~3% Fe2O3, ~2% CaO, ~2% MgO
@@ -198,7 +187,7 @@ void DetectorConstruction::DefineCommands()
                                         "Target configuration");
 
     fMessenger->DeclareProperty("material", fTargetMaterial,
-        "Target material name (NIST or custom, e.g. G4_POLYETHYLENE, Obsidian)")
+        "Target material name (NIST or custom, e.g. G4_POLYETHYLENE, Granite)")
         .SetParameterName("mat", false);
 
     fMessenger->DeclarePropertyWithUnit("thickness", "mm", fTargetThickness,

@@ -2,7 +2,7 @@
 
 ## 1. Motivation to Participate (~100 words)
 
-We are a team of high-school students from Córdoba, Argentina. In our country, plastic waste clogs rivers from the Pampas to Patagonia, and pre-Columbian obsidian tools still emerge from Andean soil. These challenges — sorting plastic for recycling and identifying archaeological materials — share a surprising connection: both can be addressed by measuring how a particle beam scatters inside matter. We want to show that the same physics probing the structure of the universe can serve society. Participating in BL4S would let us test this idea with a real accelerator beam and bring the results home to our communities.
+We are students and teachers from the Instituto San Francisco de Asís in Santa Rosa de Calamuchita, Córdoba, Argentina. On the banks of the Río Santa Rosa, two materials defy identification without destroying them: Comechingón morteros carved in rock two thousand years ago, and mixed plastic waste arriving at local recycling cooperatives. The first is untouchable archaeological heritage. The second determines whether recycling is viable. Both pose the same challenge: compositional characterisation without destroying the sample. We want to demonstrate that particle physics can solve both problems with the same non-destructive technique. Participating in BL4S would let us validate this method with a real beam and bring the results home to our communities.
 
 ---
 
@@ -20,7 +20,7 @@ When a GeV-scale charged particle traverses matter, it undergoes many small defl
 
 Using the Highland formula with PDG radiation lengths, we calculated expected scattering angles at 3 GeV/c through 10 mm targets:
 
-**Polyolefins** PE and PP (θ₀ ≈ 0.56 mrad): pure carbon–hydrogen baseline. **Oxygen-containing plastics** PS, PMMA, PET (θ₀ = 0.60–0.74 mrad): progressively heavier effective composition. **PVC** (θ₀ ≈ 1.04 mrad): the chlorine atom (Z = 17) dramatically increases scattering — detecting PVC contamination in recycling streams is our primary industrial application. **Geological materials** — obsidian, quartz, calcite, alumina, iron oxide (θ₀ = 1.17–1.81 mrad): minerals built from silicon, calcium, aluminium, and iron scatter even more.
+**Polyolefins** PE and PP (θ₀ ≈ 0.56 mrad): pure carbon–hydrogen baseline. **Oxygen-containing plastics** PS, PMMA, PET (θ₀ = 0.60–0.74 mrad): progressively heavier effective composition. **PVC** (θ₀ ≈ 1.04 mrad): the chlorine atom (Z = 17) dramatically increases scattering — detecting PVC contamination in recycling streams is our primary industrial application. **Geological materials** — quartz, calcite, alumina, iron oxide (θ₀ = 1.17–1.81 mrad): minerals built from silicon, calcium, aluminium, and iron scatter even more.
 
 A natural gap separates the plastics cluster from the minerals cluster, reflecting a fundamental divide in chemistry: organic matter (C, H, O, N) versus inorganic matter (Si, Ca, Al, Fe). This gap is itself the scientific result — it proves MCS naturally sorts materials into compositional families.
 
@@ -38,7 +38,7 @@ Two trackers upstream record the incoming direction; two downstream record the d
 
 **Plastics (primary):** PE, PP, PS, PMMA, PET, Nylon, PVC — commercial flat sheets, 5/10/20 mm thick.
 
-**Heritage/geology references (extension):** obsidian, fused quartz, calcite, alumina, iron oxide — commercially available certified mineral standards.
+**Heritage/geology references (extension):** fused quartz, calcite, alumina, iron oxide — commercially available certified mineral standards.
 
 All targets are non-biological, solid samples mounted in a rigid aluminium holder. No cutting, heating, or friction occurs at the beamline. We will provide safety data sheets and coordinate with BL4S safety officers before the experiment. If any polymer is not permitted at the assigned facility, we will substitute non-combustible low-Z references (e.g. graphite) and proceed with the geological set, which is inherently non-combustible and still demonstrates the full classifier concept.
 

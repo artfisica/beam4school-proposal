@@ -147,7 +147,6 @@ When a fast particle (electron, pion, proton) passes through a material, it gets
 | PMMA | 34.4 | 0.669 | Plastic |
 | PET | 28.7 | 0.738 | Plastic |
 | **PVC** | **15.3** | **1.039** | **Plastic** ⚠️ |
-| Obsidian | 12.3 | 1.169 | Heritage |
 | SiO₂ | 12.3 | 1.170 | Heritage |
 | CaCO₃ | 10.7 | 1.261 | Heritage |
 | Al₂O₃ | 10.2 | 1.294 | Heritage |
@@ -173,7 +172,7 @@ Here are things you can explore by creating request files:
 
 ### Advanced
 - **"Optimize the experiment"** — What momentum + thickness gives the best classification?
-- **"Heritage material identification"** — Can you tell obsidian from quartz?
+- **"Heritage material identification"** — Can you tell quartz from calcite?
 - **"Build the classification plot"** — Use two momenta to create a 2D fingerprint
 
 ---
@@ -223,9 +222,9 @@ docker run -v $(pwd):/work -w /work/simulation/build \
 
 ## 🇦🇷 About Our Team
 
-We are high-school students from Córdoba, Argentina. Our city sits at the foot of the Sierras, where pre-Columbian peoples traded obsidian tools across hundreds of kilometres. Today, Córdoba's growing recycling cooperatives face the challenge of identifying mixed plastics without expensive lab equipment.
+We are high-school students and teachers from Santa Rosa de Calamuchita, Córdoba, Argentina. Our city sits on the Río Santa Rosa at the foot of the Sierras, where Comechingón peoples carved morteros into the rock two thousand years ago. Today, Córdoba's growing recycling cooperatives face the challenge of identifying mixed plastics without expensive lab equipment.
 
-BeamScan bridges these two worlds: the same physics that can fingerprint an ancient obsidian blade can also detect PVC contamination in a recycling stream.
+BeamScan bridges these two worlds: the same physics that can fingerprint an ancient quartz mortero can also detect PVC contamination in a recycling stream.
 
 ---
 

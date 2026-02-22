@@ -71,7 +71,7 @@ materials:
 | ⭐ | Can we tell PVC from PE? | Simulate PE + PVC, check the distribution overlay |
 | ⭐ | Does beam energy matter? | Same materials at [1.0, 3.0, 6.0, 10.0] GeV/c |
 | ⭐⭐ | Thick vs thin targets | Same material at 5, 10, 20 mm thickness |
-| ⭐⭐ | Heritage materials | Simulate obsidian, quartz, calcite, Fe₂O₃ |
+| ⭐⭐ | Heritage materials | Simulate quartz, calcite, alumina, Fe₂O₃ |
 | ⭐⭐⭐ | The PE vs PP challenge | Can ANY setting separate them? (Spoiler: very hard!) |
 | ⭐⭐⭐ | Contaminant sensitivity | What if PVC has only 10% Cl? (custom material) |
 
@@ -153,7 +153,7 @@ materials:
 | ⭐ | ¿Podemos distinguir PVC de PE? | Simulá PE + PVC, mirá las distribuciones |
 | ⭐ | ¿Importa la energía del haz? | Mismos materiales a [1.0, 3.0, 6.0, 10.0] GeV/c |
 | ⭐⭐ | Blancos gruesos vs finos | Mismo material a 5, 10, 20 mm de espesor |
-| ⭐⭐ | Materiales arqueológicos | Simulá obsidiana, cuarzo, calcita, Fe₂O₃ |
+| ⭐⭐ | Materiales arqueológicos | Simulá cuarzo, calcita, alúmina, Fe₂O₃ |
 | ⭐⭐⭐ | El desafío PE vs PP | ¿Hay ALGÚN ajuste que los separe? (Pista: ¡es muy difícil!) |
 
 ### Solución de problemas

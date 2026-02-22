@@ -2,7 +2,7 @@
 
 ## 1. Motivation to Participate (~100 words)
 
-We are a team of high-school students from Córdoba, Argentina. In our country, plastic waste clogs rivers from the Pampas to Patagonia, and pre-Columbian obsidian tools still emerge from Andean soil. These challenges — sorting plastic for recycling and identifying archaeological materials — share a surprising connection: both can be addressed by measuring how a particle beam scatters inside matter. We want to show that the same physics probing the structure of the universe can serve society. Participating in BL4S would let us test this idea with a real accelerator beam and bring the results home to our communities.
+We are students and teachers from the Instituto San Francisco de Asís in Santa Rosa de Calamuchita, Córdoba, Argentina. On the banks of the Río Santa Rosa, two materials defy identification without destroying them: Comechingón morteros carved in rock two thousand years ago, and mixed plastic waste arriving at local recycling cooperatives. The first is untouchable archaeological heritage. The second determines whether recycling is viable. Both pose the same challenge: compositional characterisation without destroying the sample. We want to demonstrate that particle physics can solve both problems with the same non-destructive technique. Participating in BL4S would let us validate this method with a real beam and bring the results home to our communities.
 
 ---
 
@@ -20,7 +20,7 @@ When a GeV-scale charged particle traverses matter, it undergoes many small defl
 
 Using the Highland formula with PDG radiation lengths, we calculated expected scattering angles at 3 GeV/c through 10 mm targets:
 
-**Polyolefins** PE and PP (θ₀ ≈ 0.56 mrad): pure carbon–hydrogen baseline. **Oxygen-containing plastics** PS, PMMA, PET (θ₀ = 0.60–0.74 mrad): progressively heavier effective composition. **PVC** (θ₀ ≈ 1.04 mrad): the chlorine atom (Z = 17) dramatically increases scattering — detecting PVC contamination in recycling streams is our primary industrial application. **Geological materials** — obsidian, quartz, calcite, alumina, iron oxide (θ₀ = 1.17–1.81 mrad): minerals built from silicon, calcium, aluminium, and iron scatter even more.
+**Polyolefins** PE and PP (θ₀ ≈ 0.56 mrad): pure carbon–hydrogen baseline. **Oxygen-containing plastics** PS, PMMA, PET (θ₀ = 0.60–0.74 mrad): progressively heavier effective composition. **PVC** (θ₀ ≈ 1.04 mrad): the chlorine atom (Z = 17) dramatically increases scattering — detecting PVC contamination in recycling streams is our primary industrial application. **Geological materials** — quartz, calcite, alumina, iron oxide (θ₀ = 1.17–1.81 mrad): minerals built from silicon, calcium, aluminium, and iron scatter even more.
 
 A natural gap separates the plastics cluster from the minerals cluster, reflecting a fundamental divide in chemistry: organic matter (C, H, O, N) versus inorganic matter (Si, Ca, Al, Fe). This gap is itself the scientific result — it proves MCS naturally sorts materials into compositional families. Our Geant4 simulations confirm that even the closest useful pairs (PS vs PMMA) need fewer than 2,000 events to distinguish at 3σ — seconds of beam time. PVC versus PE needs only ~50 events. The full atlas requires under one hour of data.
 
@@ -34,7 +34,7 @@ Two trackers upstream record the incoming direction; two downstream record the d
 
 ### Targets and Facility Considerations
 
-CERN and DESY accept only non-combustible targets; ELSA also permits combustible materials. Our plan adapts accordingly: **at ELSA** we run the full set — plastics (PE, PP, PS, PMMA, PET, Nylon, PVC) plus geological references (obsidian, quartz, calcite, alumina, iron oxide), including the PVC "hero result." **At CERN or DESY** we run the non-combustible set — geological references plus graphite and metal foils as low-Z anchors — still spanning a wide X₀ range and demonstrating the full classifier concept.
+CERN and DESY accept only non-combustible targets; ELSA also permits combustible materials. Our plan adapts accordingly: **at ELSA** we run the full set — plastics (PE, PP, PS, PMMA, PET, Nylon, PVC) plus geological references (quartz, calcite, alumina, iron oxide), including the PVC "hero result." **At CERN or DESY** we run the non-combustible set — geological references plus graphite and metal foils as low-Z anchors — still spanning a wide X₀ range and demonstrating the full classifier concept.
 
 All targets are solid samples in an aluminium holder. We will provide safety data sheets and coordinate with facility safety officers.
 

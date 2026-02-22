@@ -64,7 +64,6 @@ outputs:
 #   - name: "PVC"     geant4_name: "G4_POLYVINYL_CHLORIDE"   # X₀ = 15.3 cm
 #
 # HERITAGE / GEOLOGICAL:
-#   - name: "Obsidian"  geant4_name: "Obsidian"              # X₀ = 12.3 cm (custom)
 #   - name: "SiO2"      geant4_name: "G4_SILICON_DIOXIDE"    # X₀ = 12.3 cm
 #   - name: "CaCO3"     geant4_name: "G4_CALCIUM_CARBONATE"  # X₀ = 10.7 cm
 #   - name: "Al2O3"     geant4_name: "G4_ALUMINUM_OXIDE"     # X₀ = 10.2 cm

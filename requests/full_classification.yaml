@@ -1,5 +1,5 @@
 author: "BeamScan Team — Córdoba, Argentina"
-description: "Full 12-material classification scan for proposal figures"
+description: "Full 11-material classification scan for proposal figures"
 
 beam:
   particle: "e-"
@@ -30,9 +30,6 @@ materials:
     geant4_name: "G4_POLYVINYL_CHLORIDE"
     thickness_mm: 10.0
   # ─── Heritage / Geological ───
-  - name: "Obsidian"
-    geant4_name: "Obsidian"
-    thickness_mm: 10.0
   - name: "SiO2"
     geant4_name: "G4_SILICON_DIOXIDE"
     thickness_mm: 10.0

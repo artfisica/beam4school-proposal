@@ -54,7 +54,6 @@ MATERIALS_DB = {
     "G4_MYLAR":               {"name": "PET",      "X0_cm": 28.7,  "rho": 1.38, "category": "plastic"},
     "G4_POLYVINYL_CHLORIDE":  {"name": "PVC",      "X0_cm": 15.3,  "rho": 1.40, "category": "plastic"},
     # Heritage / Geological
-    "Obsidian":               {"name": "Obsidian", "X0_cm": 12.3,  "rho": 2.40, "category": "heritage"},
     "G4_SILICON_DIOXIDE":     {"name": "SiO₂",    "X0_cm": 12.29, "rho": 2.20, "category": "heritage"},
     "G4_CALCIUM_CARBONATE":   {"name": "CaCO₃",   "X0_cm": 10.7,  "rho": 2.71, "category": "heritage"},
     "G4_ALUMINUM_OXIDE":      {"name": "Al₂O₃",   "X0_cm": 10.2,  "rho": 3.95, "category": "heritage"},

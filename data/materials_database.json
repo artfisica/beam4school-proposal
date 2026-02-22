@@ -1,7 +1,11 @@
 {
   "metadata": {
     "description": "BeamScan material properties database",
-    "sources": ["PDG Review of Particle Physics 2024", "NIST XCOM", "Geant4 NIST database"],
+    "sources": [
+      "PDG Review of Particle Physics 2024",
+      "NIST XCOM",
+      "Geant4 NIST database"
+    ],
     "units": {
       "X0": "cm",
       "density": "g/cm³",
@@ -29,7 +33,7 @@
       "geant4_name": "G4_POLYPROPYLENE",
       "category": "plastic",
       "X0_cm": 47.4,
-      "density_gcc": 0.90,
+      "density_gcc": 0.9,
       "Z_eff": 3.4,
       "theta0_3GeV_10mm_mrad": 0.562,
       "theta0_6GeV_10mm_mrad": 0.281,
@@ -94,24 +98,11 @@
       "geant4_name": "G4_POLYVINYL_CHLORIDE",
       "category": "plastic",
       "X0_cm": 15.3,
-      "density_gcc": 1.40,
+      "density_gcc": 1.4,
       "Z_eff": 8.4,
       "theta0_3GeV_10mm_mrad": 1.039,
       "theta0_6GeV_10mm_mrad": 0.519,
       "application": "Pipes, flooring, cable insulation — PROBLEM PLASTIC for recycling (releases HCl)"
-    },
-    {
-      "name": "Obsidian",
-      "full_name": "Obsidian (volcanic glass)",
-      "formula": "~70% SiO₂ + Na/K/Fe oxides",
-      "geant4_name": "Obsidian",
-      "category": "heritage",
-      "X0_cm": 12.3,
-      "density_gcc": 2.40,
-      "Z_eff": 10.8,
-      "theta0_3GeV_10mm_mrad": 1.169,
-      "theta0_6GeV_10mm_mrad": 0.585,
-      "application": "Pre-Columbian tools and weapons, archaeological trade-route tracing"
     },
     {
       "name": "SiO₂",
@@ -120,11 +111,11 @@
       "geant4_name": "G4_SILICON_DIOXIDE",
       "category": "heritage",
       "X0_cm": 12.29,
-      "density_gcc": 2.20,
+      "density_gcc": 2.2,
       "Z_eff": 10.8,
-      "theta0_3GeV_10mm_mrad": 1.170,
+      "theta0_3GeV_10mm_mrad": 1.17,
       "theta0_6GeV_10mm_mrad": 0.585,
-      "application": "Pottery component, glassmaking, geological reference"
+      "application": "Quartz from the Sierras de Córdoba — material used by Comechingón peoples for tools and morteros"
     },
     {
       "name": "CaCO₃",
