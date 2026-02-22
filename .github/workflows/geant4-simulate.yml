@@ -14,7 +14,7 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   simulate:
@@ -92,3 +92,16 @@ jobs:
             comparison/
             macros_auto/
           retention-days: 60
+
+      - name: Commit comparison results
+        run: |
+          # Copy comparison outputs into repo (not the raw geant4_output — too large)
+          mkdir -p results/geant4_comparison
+          cp -r comparison/highland/* results/geant4_comparison/ 2>/dev/null || true
+          cp -r comparison/geant4_vs_highland/* results/geant4_comparison/ 2>/dev/null || true
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add results/geant4_comparison/
+          git diff --cached --quiet || git commit -m "⚛️ Update Geant4 vs Highland comparison [skip ci]"
+          git push
