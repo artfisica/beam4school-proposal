@@ -33,54 +33,59 @@ def gaussian(x, A, mu, sigma):
     return A * np.exp(-(x - mu)**2 / (2 * sigma**2))
 
 
-def analyze_event_file(filepath):
-    """Read Geant4 CSV output and extract scattering distribution.
-
-    Geant4's CSV writer uses a non-standard header format:
-        #class tools::wcsv::ntuple
-        #title beamscan
-        #separator 44
-        #column double thetaX_mrad
-        ...
-        <data rows>
-
-    We parse the #column lines to get field names, then read data rows.
-    Also handles standard CSV (with a normal header row) as fallback.
-    """
+def read_wcsv_file(filepath):
+    """Read a single Geant4 wcsv file and return (columns, rows)."""
     columns = []
     data_rows = []
 
     with open(filepath) as f:
         lines = f.readlines()
 
+    if not lines:
+        return columns, data_rows
+
     # Detect Geant4 wcsv format vs standard CSV
-    if lines and lines[0].startswith('#class tools::wcsv::ntuple'):
-        # Geant4 wcsv format: extract column names and separator
-        separator = ','  # default
+    if lines[0].startswith('#class tools::wcsv::ntuple'):
+        separator = ','
         for line in lines:
             line = line.strip()
             if line.startswith('#separator '):
                 separator = chr(int(line.split()[-1]))
             elif line.startswith('#column '):
-                # e.g. "#column double thetaX_mrad"
                 columns.append(line.split()[-1])
             elif not line.startswith('#') and line:
                 vals = line.split(separator)
                 if len(vals) == len(columns):
                     data_rows.append(dict(zip(columns, vals)))
     else:
-        # Standard CSV fallback
         import io
         reader = csv.DictReader(io.StringIO(''.join(lines)))
         columns = reader.fieldnames or []
         data_rows = list(reader)
 
-    if not data_rows:
-        raise ValueError(f"No data rows found in {filepath}")
+    return columns, data_rows
+
+
+def analyze_event_files(filepaths):
+    """Read one or more Geant4 CSV files and extract scattering distribution.
+
+    In MT mode Geant4 produces per-thread files (_t0.csv, _t1.csv, ...).
+    This function merges them all into a single dataset.
+    """
+    all_rows = []
+    columns = []
+    for fp in filepaths:
+        cols, rows = read_wcsv_file(fp)
+        if cols and not columns:
+            columns = cols
+        all_rows.extend(rows)
+
+    if not all_rows:
+        raise ValueError(f"No data rows found in {filepaths}")
 
     # Extract scattering angle
     theta_x = []
-    for row in data_rows:
+    for row in all_rows:
         if 'thetaX_mrad' in row:
             theta_x.append(float(row['thetaX_mrad']))
         elif 'theta_x_mrad' in row:
@@ -144,20 +149,44 @@ def main():
         highland = load_highland_results(args.highland_dir)
         print(f"📊 Loaded {len(highland)} Highland predictions")
 
-    # Find and analyze all Geant4 event files
-    # Default expected name is events.csv, but Geant4 CSV output naming can vary.
-    # Prefer events.csv if present; otherwise fall back to the first CSV found in each run folder.
-    event_files = sorted(glob.glob(os.path.join(args.geant4_dir, "**/events.csv"), recursive=True))
-    if not event_files:
-        event_files = sorted(glob.glob(os.path.join(args.geant4_dir, "**/*.csv"), recursive=True))
+    # Find and analyze all Geant4 event files.
+    #
+    # In MT mode Geant4 writes per-thread files:
+    #   events_nt_beamscan_t0.csv, _t1.csv, _t2.csv, _t3.csv
+    # and the master events_nt_beamscan.csv is empty (gets deleted).
+    #
+    # Strategy: walk each run subdirectory, collect all CSVs,
+    # merge per-thread files into one dataset per configuration.
 
-    print(f"⚛️  Found {len(event_files)} Geant4 event files")
+    run_dirs = sorted([
+        d for d in glob.glob(os.path.join(args.geant4_dir, "*"))
+        if os.path.isdir(d)
+    ])
+
+    print(f"⚛️  Found {len(run_dirs)} simulation directories")
 
     geant4_results = {}
-    for ef in event_files:
-        dirname = os.path.basename(os.path.dirname(ef))
-        print(f"   Analyzing: {dirname}")
-        geant4_results[dirname] = analyze_event_file(ef)
+    for run_dir in run_dirs:
+        dirname = os.path.basename(run_dir)
+
+        # Prefer events.csv (serial mode); fall back to per-thread files (MT mode)
+        single = os.path.join(run_dir, "events.csv")
+        if os.path.exists(single) and os.path.getsize(single) > 0:
+            csv_files = [single]
+        else:
+            # MT mode: gather per-thread files
+            csv_files = sorted(glob.glob(os.path.join(run_dir, "*_t*.csv")))
+            if not csv_files:
+                csv_files = sorted(glob.glob(os.path.join(run_dir, "*.csv")))
+                # Filter out empty files
+                csv_files = [f for f in csv_files if os.path.getsize(f) > 0]
+
+        if not csv_files:
+            print(f"   ⚠️  Skipping {dirname}: no CSV data files found")
+            continue
+
+        print(f"   Analyzing: {dirname} ({len(csv_files)} file{'s' if len(csv_files)>1 else ''})")
+        geant4_results[dirname] = analyze_event_files(csv_files)
 
     # ─── Generate comparison plot ───
     fig, axes = plt.subplots(1, 2, figsize=(14, 6))
