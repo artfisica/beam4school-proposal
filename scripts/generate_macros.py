@@ -150,6 +150,7 @@ def main():
     run_all = os.path.join(args.output_dir, "run_all.sh")
     with open(run_all, 'w') as f:
         f.write("#!/bin/bash\n")
+        f.write("set -e\n")
         f.write("# Auto-generated: run all Geant4 simulations\n")
         f.write(f"# From request: {args.request_file}\n\n")
         f.write('BEAMSCAN="${BEAMSCAN_BIN:-./build/beamscan}"\n\n')
