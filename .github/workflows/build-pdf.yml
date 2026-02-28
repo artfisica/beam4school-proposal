@@ -26,10 +26,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install pandoc + LaTeX
+      - name: Install pandoc + LaTeX + Unicode fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended fonts-dejavu
 
       - name: Install Marp CLI
         run: npm install -g @marp-team/marp-cli
@@ -39,6 +39,9 @@ jobs:
           mkdir -p docs/pdf
           pandoc BL4S_Proposal_v4.md -o docs/pdf/BL4S_2026_BeamScan_v4.pdf \
             --pdf-engine=xelatex \
+            -V mainfont="DejaVu Serif" \
+            -V sansfont="DejaVu Sans" \
+            -V monofont="DejaVu Sans Mono" \
             -V geometry:margin=2.5cm \
             -V fontsize=11pt \
             -V colorlinks=true \
