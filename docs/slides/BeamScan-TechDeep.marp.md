@@ -81,17 +81,7 @@ What the code actually does — for project owners
 
 # Geant4 — Detector Geometry
 
-<div class="sm">
-
-**Layout along Z-axis (beam direction):**
-
-```
-Beam (e⁻)   DWC1      DWC2       TARGET       DWC3      DWC4     Pb-glass
-  →━━━━━━━━ │ │━━━━━━ │ │━━━━━━━ ████████ ━━━━━ │ │━━━━━━ │ │━━━━━━ ████████
- z=−80cm  z=−50cm   z=−25cm     z=0         z=+25cm  z=+50cm    z=+100cm
-```
-
-</div>
+![w:900](../figures/setup_schematic.png)
 
 | Component | Material | Size | Purpose |
 |-----------|----------|------|---------|
